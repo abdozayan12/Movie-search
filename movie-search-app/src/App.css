@@ -1,0 +1,140 @@
+/* General Reset */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  background-color: #f0f2f5;
+  color: #333;
+  width: 100%;
+  display: grid;
+}
+
+.app {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  
+}
+
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #3d3d5c;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Search Bar */
+.search-bar {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-bar input {
+  padding: 12px 20px;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid #dcdde1;
+  border-radius: 25px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar input:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar button {
+  padding: 12px 20px;
+  background-color: #4a90e2;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar button:hover {
+  background-color: #357ab7;
+  transform: translateY(-2px);
+}
+
+/* Movie List */
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 0 10px;
+}
+
+.movie-item {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.movie-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.movie-item img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #dcdde1;
+}
+
+.movie-item h3 {
+  font-size: 1.4rem;
+  margin: 15px 10px 5px;
+  color: #3d3d5c;
+  text-align: center;
+}
+
+.movie-item p {
+  font-size: 1rem;
+  color: #636e72;
+  margin: 0 10px 15px;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .search-bar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .search-bar input {
+    width: 100%;
+  }
+
+  .movie-list {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .search-bar button {
+    font-size: 0.9rem;
+    padding: 10px 15px;
+  }
+}
