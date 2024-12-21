@@ -19,8 +19,8 @@ body {
 }
 
 .app {
-  width: 90%;
-  max-width: 1200px;
+  /* width: 90%;
+  max-width: 1200px; */
   margin: 20px auto;
   padding: 20px;
   text-align: center;
